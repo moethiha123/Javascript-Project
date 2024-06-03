@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Project</title>
+    <style>
+        .container {
+            width: 800px;
+            box-shadow: 5px 5px 5px 5px gray;
+            margin: 100px auto;
+            padding: 50px;
+        }
+        #result{
+            margin: 50px 0px;
+       
+            padding: 20px;
+            background: darkgreen;
+            color: white;
+            font-size: 20px;
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+                <h3>Enter Your Information</h3>
+                <input type="text" name="" id="name" placeholder="Enter Your Name"><br><br>
+                <input type="email" name="" id="email" placeholder="Enter Your Email"><br><br>
+                <input type="text" name="" id="address" placeholder="Enter Your Address"><br><br>
+                <input type="text" name="" id="phone"placeholder="Enter Your Phone Number"><br><br>
+                <input type="button" value="Show" onclick="ShowResult()">
+        </form>
+        <div cid="result"></div>
+        <h5>Change Theme</h5>
+        <button onclick="document.getElementById('result').style.background='blue'">Theme One</button>
+        <button onclick="document.getElementById('result').style.background='yellow'">Theme Two</button>
+        <button onclick="document.getElementById('result').style.background='green'">Theme Three</button>
+        <button onclick="document.getElementById('result').style.background='red'">Theme Four</button>
+        <button onclick="document.getElementById('result').style.background='skyblue'">Theme Five</button>
+        <h5>Change Case</h5>
+        <button onclick="uppercase()">UpperCase</button>
+        <button onclick="lowercase()">LowerCase</button>
+
+        
+        <div id="result">
+                <script>
+                    function ShowResult()
+                    {
+                            let name=document.getElementById('name').value;
+                            let email=document.getElementById('email').value;
+                            let address=document.getElementById('address').value;
+                            let phone=document.getElementById('phone').value;
+                            document.getElementById('result').innerHTML=
+                            'Your Name is '+name+'<br>'+
+                            'Your Email is ' +email+'<br>'+
+                            'Your address is ' +address+'<br>'+
+                            'Your Phone is '+phone+'<br>';
+
+
+                    }
+                    function uppercase(){
+                        let x=document.getElementById('result')
+                        x.innerHTML=x.innerHTML.toUpperCase();
+
+                    }
+                    function lowercase(){
+                        let x=document.getElementById('result')
+                        x.innerHTML=x.innerHTML.toLowerCase();
+
+                    }
+                         
+                            
+                </script>
+        </div>
+    </div>
+    
+</body>
+</html>
